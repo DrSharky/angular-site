@@ -1,0 +1,15 @@
+<div class="sidebar" [@openClose]="sidenavState">
+  <span id="close-button"
+  [@openClose]="closeButtonState"
+        class="fa fa-times"
+        [style.color]="closeButtonColor"
+        (click)="collapse()">
+      </span>
+  <span id="sidebar-expand-bttn"
+  [@openClose]="menuButtonState"
+      class="fa fa-bars"
+      [style.color]="menuButtonColor"
+      (click)="expand()"
+      [style.cursor]="menuButtonCursor">
+  </span>
+</div>
