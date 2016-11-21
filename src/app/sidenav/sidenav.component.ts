@@ -13,7 +13,7 @@ import { Component, OnInit, Input, trigger, state, style, transition, animate } 
         transition('expanded => collapsed', [animate(250, style({ width: '100px' })), animate(250)]),
         state('menuClosed', style({ opacity: 1, cursor: 'pointer' })),
         state('menuOpened', style({ opacity: 0, cursor: 'default' })),
-        transition('menuClosed <=> menuOpened', [animate(250, style({ opacity: 0.0 })), animate(250)]),
+        transition('menuClosed <=> menuOpened', [animate(250, style({ opacity: 0 })), animate(250)]),
       ]
     ),
 
@@ -24,6 +24,7 @@ export class SidenavComponent implements OnInit {
   sidenavState: string;
   closeButtonState: string;
   menuButtonState: string;
+  links = ["Home", "About", "Work"];
 
   expand() {
     this.sidenavState = 'expanded';
