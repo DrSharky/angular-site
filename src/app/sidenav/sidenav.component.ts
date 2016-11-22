@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, trigger, state, style, transition, animate } from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 
 @Component({
   selector: 'sidenav',
@@ -24,7 +25,7 @@ export class SidenavComponent implements OnInit {
   sidenavState: string;
   closeButtonState: string;
   menuButtonState: string;
-  links = ["Home", "About", "Work"];
+  links = ["/Home", "/About", "/Work"];
 
   expand() {
     this.sidenavState = 'expanded';
