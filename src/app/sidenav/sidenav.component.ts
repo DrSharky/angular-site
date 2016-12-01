@@ -25,18 +25,21 @@ export class SidenavComponent implements OnInit {
   sidenavState: string;
   closeButtonState: string;
   menuButtonState: string;
+  linksDisabled: boolean;
   links = ["/Home", "/About", "/Work"];
 
   expand() {
     this.sidenavState = 'expanded';
     this.menuButtonState = 'menuOpened';
     this.closeButtonState = 'menuClosed';
+    this.linksDisabled = false;
   }
 
   collapse() {
     this.sidenavState = 'collapsed';
     this.menuButtonState = 'menuClosed';
     this.closeButtonState = 'menuOpened';
+    this.linksDisabled = true;
   }
 
 

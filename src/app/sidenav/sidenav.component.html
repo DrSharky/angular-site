@@ -2,6 +2,7 @@
   <span id="close-button" [@openClose]="closeButtonState" class="fa fa-times" (click)="collapse()"></span>
   <span id="sidebar-expand-bttn" [@openClose]="menuButtonState" class="fa fa-bars" (click)="expand()"></span>
   <div *ngFor="let link of links;">
-  <a id="link-list" [@openClose]="closeButtonState" (click)="collapse()" routerLink={{link}}>{{link.slice(1)}}</a>
+  <a  id="link-list" [class.disabled]="linksDisabled ? true : null" [@openClose]="closeButtonState"
+     (click)="collapse()" routerLink={{link}}>{{link.slice(1)}}</a>
 </div>
 </div>
